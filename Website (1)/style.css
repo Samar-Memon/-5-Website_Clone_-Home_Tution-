@@ -1,0 +1,109 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+:root{
+    --black: #0f0f0f;
+    --white: white;
+}
+
+body{
+    background-color: var(--black);
+    color: white;
+}
+
+/* Navbar Styling */
+nav{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 10px;
+}
+nav .navBtn{
+    display: flex;
+    gap: 10px;
+}
+nav .ytLogo{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+nav .ytLogo h2{
+    display: flex;
+}
+nav .fa-bars{
+    color: var(--white);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+nav .fa-bars:hover{
+    background-color: #ffffff25;
+}
+
+nav .ytSearchInputBar{
+    max-width: 400px;
+    width: 100%;
+    height: 50px;
+    border-radius: 40px;
+    overflow: hidden;
+    display: flex;
+    border: 1px solid white; 
+}
+nav .ytSearchInputBar input{
+    height: 100%;
+    width: 80%;
+    background-color: transparent;
+    color: #00000017;
+    padding-inline: 20px;
+    font-weight: bold;
+    font-size: 18px;
+    outline: none;
+}
+nav .ytSearchInputBar .fa-search{
+    background-color: grey;
+    height: 100%;
+    width: 20%;
+    display: flex;
+    justify-content: flex-start;
+    padding-inline: 10px;
+    align-items: center;
+    font-size: 20px;
+}
+nav .search_mic{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+nav .details{
+    display: flex;
+    gap: 5px;
+}
+nav .search_mic .mic,.details i{
+    min-width: 40px;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff25;
+    border-radius: 50%;
+}
+.details img{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff25;
+    border-radius: 50%;
+}
