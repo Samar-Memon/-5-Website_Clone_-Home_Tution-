@@ -5,36 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
     <link rel="stylesheet" href="./style.css">
-    <link rel="icon" type="image/png" href="https://www.youtube.com/s/desktop/4151fd0f/img/favicon_32x32.png">
-    <title>YouTube</title>
+    <link rel="icon" type="image/png" href="./Images/icon.jpg">
+    <title>Car Website</title>
 </head>
 <body>
-    <nav>
-        <div class="navBtn">
-            <i class="fa-solid fa-bars"></i>
-        <!-- Yt Logo -->
-        <div class="ytLogo">
-            <img src="https://www.youtube.com/s/desktop/4151fd0f/img/favicon_32x32.png" alt="">
-        <h2>YouTube <sup style="font-size: 10px; font-weight: lighter;">PK</sup></h2>
-    </div>
-        </div>
+    <!-- Header Structure Start -->
+        <header>
+            <!-- Navbar Structure Start -->
+            <nav>
+                    <input type="checkbox"  id="toggle">
+                    <a href="/index.html" class="nav-logo">
+                        <h1>Car Logo</h1>
+                    </a>
+                    <ul class="menu-items">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#ferrari">Ferrari</a></li>
+                        <li><a href="#lamborghini">Lamborghini</a></li>
+                        <li><a href="#toyota">Toyota</a></li>
+                        <li><a href="#mercedes">Mercedes</a></li>
+                        <li><a href="#bmw">BMW</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                    <label for="toggle" class="open" style="font-size: 26px; color: #fff; cursor: pointer;"><i class="fa-solid fa-bars"></i></label>
+                    <label for="toggle" class="close" style="font-size: 26px; color: #fff; cursor: pointer;"><i class="fa-solid fa-xmark"></i></label>
+                </nav>
+            <!-- Navbar Structure End -->
 
-    <!-- Yt Search Input -->
-     <div class="search_mic">
-        <div class="ytSearchInputBar">
-            <input type="text" placeholder="Search">
-                <i class="fa-solid fa-search"></i>
-         </div>
-         <i class="fa-solid fa-search mic"></i>
-     </div>
+            <!-- Home Content Structure Start -->
+                <div class="home-content">
+                    <h1>Home Content Heading Here</h1>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis, tempora. Aliquid a repellendus sint nulla molestiae incidunt veniam sit nisi!</p>
+                    <a href="#ferrari">Explore</a>
+                </div>
+            <!-- Home Content Structure End -->
 
-     <!-- Details -->
-      <dic class="details">
-        <i class="fa-solid fa-search"></i>
-        <i class="fa-solid fa-search"></i>
-        <img src="" alt="">
-      </dic>
-
-    </nav>
+        </header>
+    <!-- Header Structure End -->
 </body>
 </html>
