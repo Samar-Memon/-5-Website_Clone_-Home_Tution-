@@ -3,6 +3,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
 }
 li{
     list-style-type: none;
@@ -10,6 +11,9 @@ li{
 a{
     text-decoration: none;
     color: #fff;
+}
+body{
+    overflow-x: hidden;
 }
 
 /* Header Styling Start */
@@ -24,6 +28,7 @@ header{
 }
 /* Navbar Styling Start */
 nav{
+    z-index: 1000;
     width: 100%;
     height: 10vh;
     background-color: gray;
@@ -100,11 +105,185 @@ nav input#toggle{
 
 /* Header Styling End */
 
+
+/* About Section Styling Start */
+.about-area{
+    padding-block: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: #f5f5f7;
+}
+.about-txt,.about-img{
+    width: 47%;
+    height: 350px;
+}
+.about-txt{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 18px;
+    padding: 20px;
+    font-weight: bolder;
+    line-height: 25px;
+    letter-spacing: 2px;
+}
+.about-txt p:nth-child(1){
+    position: relative;
+}
+.about-txt p:nth-child(1)::after{
+    content: '';
+    position: absolute;
+    width: 70%;
+    height: 4px;
+    border-radius: 5px;
+    background-color: black;
+    left: -5px;
+    bottom: -5px;
+}
+.about-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.about-txt{
+    transform: translateX(-150%);
+    animation: aboutTxt 500ms 100ms 1 forwards;
+}
+.about-img{
+    padding: 20px;
+    transform: translateX(150%);
+    animation: aboutImg 500ms 100ms 1 forwards;
+}
+@keyframes aboutTxt {
+    0%{
+        transform: translateX(-150%);
+    }100%{
+        transform: translate(0);
+    }
+}
+@keyframes aboutImg {
+    0%{
+        transform: translateX(150%);
+    }100%{
+        transform: translate(0);
+    }
+}
+/* About Section Styling End */
+
+/* Cars Area Styling Start */
+.cars-area{
+    padding-block: 30px;
+}
+.cars-area h1{
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.cars-childrens{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.car-child{
+    width: 32%;
+    height: 300px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.car-child img{
+    width: 100%;
+    height: 100%;
+}
+.car-child::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: #000000ab;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    transform: scaleY(0);
+    transform-origin: 100% 100%;
+    transition: all 400ms ease;
+}
+.car-content{
+    width: 100%;
+    height: 100%;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleY(0);
+    transform-origin: 100% 100%;
+    transition: all 400ms ease;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.car-content h2{
+    font-size: 32px;
+    text-transform: capitalize;
+}
+.car-content a{
+    padding: 7px 20px;
+    background-color: #fff;
+    color: black;
+    border-radius: 10px;
+    border: 2px solid white;
+    font-weight: bolder;
+}
+.car-content a:hover{
+    background-color: transparent;
+    color: white;
+}
+.car-child:hover::after,.car-child:hover .car-content{
+    transform: scaleY(1);
+}
+/* Cars Area Styling End */
+
+/* Set Logo Car-Child Styling Start */
+#ferrari .car-content{
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),url(./Images/ferrari-logo.jpg) center no-repeat;
+    background-size: cover;
+}
+#lamborghini .car-content{
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),url(./Images/lamborghini-logo.jpg) center no-repeat;
+    background-size: cover;
+}
+#toyota .car-content{
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),url(./Images/toy-logo.jpg) center no-repeat;
+    background-size: cover;
+}
+#mercedes .car-content{
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),url(./Images/mer-logo.jpeg) center no-repeat;
+    background-size: cover;
+}
+#bmw .car-content{
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),url(./Images/bmw-logo.jpg) center no-repeat;
+    background-size: cover;
+}
+/* Set Logo Car-Child Styling End */
+
+
+/* All Over Media Query for Screen Size is (1200px) */
+@media (max-width: 1200px) {
+   .car-child{
+    width: 47%;
+   }
+}
+
+
 /* All Over Media Query for Screen Size is (890px) */
 @media (max-width: 890px) {
-    body{
-        overflow-x: hidden;
-    }
     nav label{
         display: block;
     }
@@ -137,5 +316,26 @@ nav input#toggle{
     }
     nav input#toggle:checked~label.close{
         display: block;
+    }
+    .about-txt,.about-img{
+        width: 100%;
+    }
+    .car-child{
+        width: 80%;
+    }
+    .car-child img{
+        object-fit: cover;
+    }
+}
+
+
+/* All Over Media Query for Screen Size is (600px) */
+
+@media (max-width: 600px) {
+    .cars-childrens{
+        width: 100%;
+    }
+    .car-child{
+        width: 98%;
     }
 }
