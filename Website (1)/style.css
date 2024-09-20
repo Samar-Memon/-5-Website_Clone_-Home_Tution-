@@ -273,6 +273,129 @@ nav input#toggle{
 }
 /* Set Logo Car-Child Styling End */
 
+/* Testimonials Styling Start  */
+#testimonials h1{
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.testimonials-sec{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.testimonial-child{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 5px;
+    line-height: 22px;
+    margin-bottom: 20px;
+}
+.testimonial-child img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+.testimonial-child button{
+    width: 30%;
+    height: 50px;
+    font-size: 18px;
+    font-weight: bolder;
+    background-color: #000000ab;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 2px solid gray;
+}
+.testimonial-child button:hover{
+    background-color: transparent;
+    color: #000000ab;
+}
+/* Testimonials Styling End  */
+
+/* Contact Styling Start */
+.contact-sec{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    border: 1px solid #ccc;
+}
+.contact-child{
+    width: 49%;
+}
+.contact-img img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+}
+.contact-form{
+    padding: 10px;
+}
+.contact-form h1::after{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 60%;
+    height: 2px;
+    border-radius: 10px;
+    background-color: #000;
+}
+form{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+form input{
+    height: 50px;
+    padding-inline: 10px;
+    font-weight: bolder
+}
+form textarea{
+    padding: 10px;
+    font-weight: bolder;
+}
+form button{
+    width: 30%;
+    height: 40px;
+    font-weight: bolder;
+    font-size: 17px;
+    background-color: #000000ab;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+form button:hover{
+    background-color: #000000bf;
+}
+/* Contact Styling End */
+
+footer{
+    width: 100%;
+    padding-block: 20px;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 17px;
+    color: white;
+    background-color: #000000ab;
+    margin-top: 20px;
+    text-transform: capitalize;
+}
+
 
 /* All Over Media Query for Screen Size is (1200px) */
 @media (max-width: 1200px) {
@@ -281,6 +404,15 @@ nav input#toggle{
    }
 }
 
+/* All Over Media Query for Screen Size is (1024px) */
+@media (max-width: 1024px) {
+    .testimonial-child{
+        width: 49%;
+    }
+    .contact-child{
+        width: 100%;
+    }
+}
 
 /* All Over Media Query for Screen Size is (890px) */
 @media (max-width: 890px) {
@@ -326,6 +458,9 @@ nav input#toggle{
     .car-child img{
         object-fit: cover;
     }
+    .testimonial-child{
+        width: 100%;
+    }
 }
 
 
@@ -335,7 +470,7 @@ nav input#toggle{
     .cars-childrens{
         width: 100%;
     }
-    .car-child{
+    .car-child, .testimonials-sec,.contact-sec{
         width: 98%;
     }
 }
