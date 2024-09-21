@@ -1,0 +1,118 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* nav Styling Start */ 
+header{
+    height: 65vh;
+    background: url('https://static.vecteezy.com/system/resources/thumbnails/002/006/775/small_2x/paper-art-shopping-online-on-smartphone-and-new-buy-sale-promotion-backgroud-for-banner-market-ecommerce-free-vector.jpg') center no-repeat;
+    background-size: cover;
+}
+nav{
+    width: 100%;
+    background: #00a6bb;
+    height: 9vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 15px;
+}
+nav h1{
+    color: white;
+    font-weight: bolder;
+    font-size: 36px;
+}
+nav ul{
+    list-style-type: none;
+    font-size: 18px;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+nav ul a{
+    text-decoration: none;
+    color: #ffcdce;
+    padding-bottom: 5px;
+}
+nav ul a:hover{
+    border-bottom: 3px solid #ffcdce;
+}
+nav ul li:nth-child(4) a{
+    background-color: #ffcdce;
+    color: #00a6bb;
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 3px solid transparent;
+    transition: all 400ms ease;
+}
+nav ul li:nth-child(4) a:hover{
+    border-color: #ffcdce;
+    background-color: transparent;
+    color: #ffcdce;
+}
+/* Hambureger Menu bar Styling Start */
+.hamburger-box{
+    width: 35px;
+    height: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;
+}
+.hamburger-box .row{
+    width: 100%;
+    height: 5px;
+    background-color: #ffcdce;
+    border-radius: 10px;
+}
+.hamburger-box .row1{
+    transform-origin: 0% 0%;
+    transition: all 300ms ease;
+}
+.hamburger-box .row3{
+    transform-origin: 0% 100%;
+    transition: all 300ms ease;
+}
+#toggle:checked ~.hamburger-box .row1{
+    transform: rotate(45deg);
+}
+#toggle:checked ~.hamburger-box .row2{
+    transform: scaleY(0);
+}
+#toggle:checked ~.hamburger-box .row3{
+    transform: rotate(-45deg);
+}
+#toggle{
+    display: none;
+}
+nav .hamburger-box{
+    display: none;
+}
+/* Hambureger Menu bar Styling End */
+/* nav Styling End */
+
+
+/* Media Query for Screen  630px */
+@media (max-width: 630px) {
+    body{
+        overflow-x: hidden;
+    }
+    nav ul{
+        flex-direction: column;
+        position: absolute;
+        background: #00a6bb;
+        padding: 20px;
+        top: 9vh;
+        right: -100%;
+        transition: all 400ms ease;
+    }
+     nav .hamburger-box{
+        display: flex;
+    }
+    #toggle:checked ~ ul{
+        right: 0;
+    }
+}
