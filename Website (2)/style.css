@@ -116,7 +116,7 @@ nav .hamburger-box{
 
 
 /* category Area Styling Start  */
-#category,#homepage{
+section{
     width: 100%;
     padding-block: 40px;
 }
@@ -210,6 +210,61 @@ nav .hamburger-box{
 /* Card Styling End */
 /* HomePage Area Styling End  */
 
+/* Testimonials Area Styling Start */
+.testimonials-area{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    row-gap: 20px;
+}
+.test-child{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 5px;
+    font-size: 14px;
+}
+/* Testimonials Area Styling End */
+
+/* footer1 Styling Start */
+#footer1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-inline: 10px;
+    background-color: #00a6bb;
+    padding-block: 60px;
+    color: #ffcdce;
+}
+.f-child{
+    width: 20%;
+    margin-bottom: 20px;
+}
+#footer1 ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+#footer1 ul li:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+/* footer1 Styling End */
+
+
+/* Media Query for Screen  1000px */
+@media (max-width: 1000px) {
+    .test-child{
+        width: 49%;
+    }
+    .f-child{
+        width: 49%;
+    }
+}
 
 /* Media Query for Screen  630px */
 @media (max-width: 630px) {
@@ -229,5 +284,11 @@ nav .hamburger-box{
     }
     #toggle:checked ~ ul{
         transform: scale(1);
+    }
+    .test-child{
+        width: 100%;
+    }
+    .f-child{
+        width: 100%;
     }
 }
