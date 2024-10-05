@@ -292,3 +292,50 @@ section{
         width: 100%;
     }
 }
+
+
+/* Form Styling Start */
+.form-sec{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    box-shadow: 2px 3px 20px #aaa;
+    max-width: 500px;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+form input{
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bolder;
+    border-radius: 5px;
+    outline: none;
+    border: 2px solid #00a6bb;
+    color: black;
+}
+::placeholder{
+    color: black;
+}
+form button{
+    width: 100%;
+    background-color: #00a6bb;
+    color: #fff;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bolder;
+    font-size: 17px;
+    cursor: pointer;
+    border: 2px solid #00a6bb;
+}
+form button:hover{
+    color: #00a6bb;
+    background-color: transparent;
+}
+/* Form Styling End */
